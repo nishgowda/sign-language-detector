@@ -1,0 +1,4 @@
+env
+data/input/sign_mnist_test
+data/input/sign_mnist_train
+models
