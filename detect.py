@@ -20,7 +20,7 @@ signs = {'0': 'A', '1': 'B', '2': 'C', '3': 'D', '4': 'E', '5': 'F', '6': 'G', '
         '10': 'K', '11': 'L', '12': 'M', '13': 'N', '14': 'O', '15': 'P', '16': 'Q', '17': 'R',
         '18': 'S', '19': 'T', '20': 'U', '21': 'V', '22': 'W', '23': 'X', '24': 'Y' }
 
-print("Show your hand in the square...")
+print("Press q or Q to quit")
 while True:
     ret, frame = cap.read()
 
@@ -41,13 +41,15 @@ while True:
     pred = out.max(1, keepdim=True)[1]
 
     if float(probs[0,0]) < 0.4:
-        sign_detected = 'Sign not detected'
+        predicted_text = 'Sign not detected'
     else:
-        sign_detected = signs[str(int(pred))] + ': ' + '{:.2f}'.format(float(probs[0,0]) * 100) + '%'
+        percent_prob = float(probs[0, 0]) * 100
+        sign = str(int(pred))
+        predicted_text = signs[sign] + ': ' + '{:.2f}'.format(percent_prob) + '%'
 
     font = cv2.FONT_HERSHEY_SIMPLEX
     
-    frame = cv2.putText(frame, sign_detected, (60,285), font, 1, (0,255,0), 2, cv2.LINE_AA)
+    frame = cv2.putText(frame, predicted_text, (60,285), font, 1, (0,255,0), 2, cv2.LINE_AA)
     cv2.putText(frame, "Place your hand in the box", (51, 48), font, 1, (0, 255, 0), 2, cv2.LINE_AA)
     frame = cv2.rectangle(frame, (50, 80), (250, 250), (0, 255, 0), 3)
 
