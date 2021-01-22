@@ -1,3 +1,11 @@
+"""
+
+Standard convolutional neural network with
+2 conv.layers and 2 max pools. Also, two functions
+test and evaulate are for generating feedback on the
+performance of the net. 
+
+"""
 import torch.nn as nn
 import torch.nn.functional as F
 
