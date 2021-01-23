@@ -24,7 +24,6 @@ class CNN(nn.Module):
         self.fc1 = nn.Linear(1280, 250)
         self.fc2 = nn.Linear(250, 25)
 
-
     def forward(self, x):
         x = self.conv1(x)
         x = self.batch_norm1(x)
@@ -44,7 +43,6 @@ class CNN(nn.Module):
         
         return x
     
-    
     def test(self, predictions, labels):
         self.eval()
         correct = 0
@@ -55,7 +53,6 @@ class CNN(nn.Module):
         acc = correct / len(predictions)
         print("Correct predictions: %5d / %5d (%5f)" % (correct, len(predictions), acc))
         
-    
     def evaluate(self, predictions, labels):
         correct = 0
         for p, l in zip(predictions, labels):
