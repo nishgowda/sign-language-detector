@@ -1,6 +1,8 @@
 # Sign Language Detector
 
-Classify sign language letters using a Convolutional Neural Network made in PyTorch and uses OpenCV for real time camera applications. The jupyter notebook for this project can also be found in this repository.
+Classify sign language letters using a Convolutional Neural Network made in PyTorch and uses OpenCV for real time camera applications. 
+
+*The jupyter notebook for this project can also be found in this repository.*
 
 
 ## Setup 
