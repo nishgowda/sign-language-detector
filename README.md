@@ -4,13 +4,15 @@ Classify sign language letters using a Convolutional Neural Network made in PyTo
 
 *The jupyter notebook for this project can also be found in this repository.*
 
-
 ## Setup 
 First download the necessary dependencies (preferable in a virtual environment) 
 ```
 $ pip install requirements.txt
 ```
-If you're using the jupyter notebook, you'll only be able to create the model as opencv video does not work on it.
+*If you're using the jupyter notebook, you'll only be able to create the model as opencv video does not work on it.*
+
+Then, download the [sign language MNIST dataset](https://www.kaggle.com/datamunge/sign-language-mnist) to train your model.
+
 
 ## Training
 First download the MNSIT sign language training and testing datasets and place it in the data/input directory. Run ```train.py``` along with the name for the model that will be saved.
