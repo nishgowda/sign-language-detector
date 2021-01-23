@@ -2,6 +2,14 @@
 
 Classify sign language letters using a Convolutional Neural Network made in PyTorch and uses OpenCV for real time camera applications. The jupyter notebook for this project can also be found in this repository.
 
+
+## Setup 
+First download the necessary dependencies (preferable in a virtual environment) 
+```
+$ pip install requirements.txt
+```
+If you're using the jupyter notebook, you'll only be able to create the model as opencv video does not work on it.
+
 ## Training
 First download the MNSIT sign language training and testing datasets and place it in the data/input directory. Run ```train.py``` along with the name for the model that will be saved.
 
